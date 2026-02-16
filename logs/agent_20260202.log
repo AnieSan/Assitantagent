@@ -1,0 +1,4 @@
+2026-02-02 12:25:19,388 - agent - INFO - logger.py:46 - 信息日志
+2026-02-02 12:25:19,388 - agent - ERROR - logger.py:47 - 错误日志
+2026-02-02 12:25:19,388 - agent - WARNING - logger.py:48 - 警告日志
+2026-02-02 12:25:19,388 - agent - DEBUG - logger.py:49 - 调试日志

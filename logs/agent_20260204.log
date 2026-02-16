@@ -1,0 +1,712 @@
+2026-02-04 20:53:20,851 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 20:53:20,851 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,350 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 20:53:39,350 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,351 - agent - ERROR - vector_store.py:88 - [加载知识库]扫地机器人100问.pdf加载失败：File path 扫地机器人100问.pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path 扫地机器人100问.pdf is not a valid file or url
+2026-02-04 20:53:39,352 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问2.txt路径不存在
+2026-02-04 20:53:39,352 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,352 - agent - ERROR - vector_store.py:88 - [加载知识库]扫地机器人100问2.txt加载失败：Error loading 扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '扫地机器人100问2.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 扫地机器人100问2.txt
+2026-02-04 20:53:39,375 - agent - ERROR - file_handler.py:10 - md5获取失败,扫拖一体机器人100问.txt路径不存在
+2026-02-04 20:53:39,375 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,375 - agent - ERROR - vector_store.py:88 - [加载知识库]扫拖一体机器人100问.txt加载失败：Error loading 扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '扫拖一体机器人100问.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 扫拖一体机器人100问.txt
+2026-02-04 20:53:39,376 - agent - ERROR - file_handler.py:10 - md5获取失败,故障排除.txt路径不存在
+2026-02-04 20:53:39,376 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,376 - agent - ERROR - vector_store.py:88 - [加载知识库]故障排除.txt加载失败：Error loading 故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '故障排除.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 故障排除.txt
+2026-02-04 20:53:39,377 - agent - ERROR - file_handler.py:10 - md5获取失败,维护保养.txt路径不存在
+2026-02-04 20:53:39,377 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,377 - agent - ERROR - vector_store.py:88 - [加载知识库]维护保养.txt加载失败：Error loading 维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '维护保养.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 维护保养.txt
+2026-02-04 20:53:39,378 - agent - ERROR - file_handler.py:10 - md5获取失败,选购指南.txt路径不存在
+2026-02-04 20:53:39,378 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:53:39,378 - agent - ERROR - vector_store.py:88 - [加载知识库]选购指南.txt加载失败：Error loading 选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '选购指南.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 选购指南.txt
+2026-02-04 20:59:14,353 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 20:59:14,353 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:59:14,353 - agent - ERROR - vector_store.py:88 - [加载知识库]扫地机器人100问.pdf加载失败：File path 扫地机器人100问.pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path 扫地机器人100问.pdf is not a valid file or url
+2026-02-04 20:59:14,354 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问2.txt路径不存在
+2026-02-04 20:59:14,354 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:59:14,355 - agent - ERROR - vector_store.py:88 - [加载知识库]扫地机器人100问2.txt加载失败：Error loading 扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '扫地机器人100问2.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 扫地机器人100问2.txt
+2026-02-04 20:59:14,356 - agent - ERROR - file_handler.py:10 - md5获取失败,扫拖一体机器人100问.txt路径不存在
+2026-02-04 20:59:14,356 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:59:14,356 - agent - ERROR - vector_store.py:88 - [加载知识库]扫拖一体机器人100问.txt加载失败：Error loading 扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '扫拖一体机器人100问.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 扫拖一体机器人100问.txt
+2026-02-04 20:59:14,356 - agent - ERROR - file_handler.py:10 - md5获取失败,故障排除.txt路径不存在
+2026-02-04 20:59:14,356 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:59:14,357 - agent - ERROR - vector_store.py:88 - [加载知识库]故障排除.txt加载失败：Error loading 故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '故障排除.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 故障排除.txt
+2026-02-04 20:59:14,357 - agent - ERROR - file_handler.py:10 - md5获取失败,维护保养.txt路径不存在
+2026-02-04 20:59:14,357 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:59:14,357 - agent - ERROR - vector_store.py:88 - [加载知识库]维护保养.txt加载失败：Error loading 维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '维护保养.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 维护保养.txt
+2026-02-04 20:59:14,358 - agent - ERROR - file_handler.py:10 - md5获取失败,选购指南.txt路径不存在
+2026-02-04 20:59:14,358 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 20:59:14,358 - agent - ERROR - vector_store.py:88 - [加载知识库]选购指南.txt加载失败：Error loading 选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '选购指南.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 70, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 选购指南.txt
+2026-02-04 21:03:32,659 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 21:03:32,660 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:03:32,660 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问.pdf加载失败：File path 扫地机器人100问.pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path 扫地机器人100问.pdf is not a valid file or url
+2026-02-04 21:03:32,662 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问2.txt路径不存在
+2026-02-04 21:03:32,662 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:03:32,662 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问2.txt加载失败：Error loading 扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '扫地机器人100问2.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 扫地机器人100问2.txt
+2026-02-04 21:03:32,663 - agent - ERROR - file_handler.py:10 - md5获取失败,扫拖一体机器人100问.txt路径不存在
+2026-02-04 21:03:32,663 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:03:32,663 - agent - ERROR - vector_store.py:89 - [加载知识库]扫拖一体机器人100问.txt加载失败：Error loading 扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '扫拖一体机器人100问.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 扫拖一体机器人100问.txt
+2026-02-04 21:03:32,664 - agent - ERROR - file_handler.py:10 - md5获取失败,故障排除.txt路径不存在
+2026-02-04 21:03:32,664 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:03:32,664 - agent - ERROR - vector_store.py:89 - [加载知识库]故障排除.txt加载失败：Error loading 故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '故障排除.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 故障排除.txt
+2026-02-04 21:03:32,664 - agent - ERROR - file_handler.py:10 - md5获取失败,维护保养.txt路径不存在
+2026-02-04 21:03:32,665 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:03:32,665 - agent - ERROR - vector_store.py:89 - [加载知识库]维护保养.txt加载失败：Error loading 维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '维护保养.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 维护保养.txt
+2026-02-04 21:03:32,665 - agent - ERROR - file_handler.py:10 - md5获取失败,选购指南.txt路径不存在
+2026-02-04 21:03:32,665 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:03:32,666 - agent - ERROR - vector_store.py:89 - [加载知识库]选购指南.txt加载失败：Error loading 选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '选购指南.txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 50, in get_document
+    return text_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 40, in text_loader
+    return TextLoader(file_path,encoding="utf-8").load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading 选购指南.txt
+2026-02-04 21:08:59,142 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 21:08:59,142 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:08:59,197 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(os.path.join(get_abs_path("data"),f))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-02-04 21:08:59,215 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问2.txt路径不存在
+2026-02-04 21:08:59,215 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:08:59,222 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问2.txt加载失败：name 'split_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 79, in load_document
+    if not split_document:
+           ^^^^^^^^^^^^^^
+NameError: name 'split_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:08:59,223 - agent - ERROR - file_handler.py:10 - md5获取失败,扫拖一体机器人100问.txt路径不存在
+2026-02-04 21:08:59,223 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:08:59,231 - agent - ERROR - vector_store.py:89 - [加载知识库]扫拖一体机器人100问.txt加载失败：name 'split_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 79, in load_document
+    if not split_document:
+           ^^^^^^^^^^^^^^
+NameError: name 'split_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:08:59,232 - agent - ERROR - file_handler.py:10 - md5获取失败,故障排除.txt路径不存在
+2026-02-04 21:08:59,233 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:08:59,241 - agent - ERROR - vector_store.py:89 - [加载知识库]故障排除.txt加载失败：name 'split_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 79, in load_document
+    if not split_document:
+           ^^^^^^^^^^^^^^
+NameError: name 'split_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:08:59,241 - agent - ERROR - file_handler.py:10 - md5获取失败,维护保养.txt路径不存在
+2026-02-04 21:08:59,241 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:08:59,249 - agent - ERROR - vector_store.py:89 - [加载知识库]维护保养.txt加载失败：name 'split_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 79, in load_document
+    if not split_document:
+           ^^^^^^^^^^^^^^
+NameError: name 'split_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:08:59,250 - agent - ERROR - file_handler.py:10 - md5获取失败,选购指南.txt路径不存在
+2026-02-04 21:08:59,250 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:08:59,257 - agent - ERROR - vector_store.py:89 - [加载知识库]选购指南.txt加载失败：name 'split_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 79, in load_document
+    if not split_document:
+           ^^^^^^^^^^^^^^
+NameError: name 'split_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:09:32,681 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 21:09:32,681 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:32,730 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(os.path.join(get_abs_path("data"),f))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-02-04 21:09:32,733 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问2.txt路径不存在
+2026-02-04 21:09:32,733 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:32,735 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问2.txt加载失败：name 'spilted_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 83, in load_document
+    self.vector_store.add_documents(spilted_document)
+                                    ^^^^^^^^^^^^^^^^
+NameError: name 'spilted_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:09:32,736 - agent - ERROR - file_handler.py:10 - md5获取失败,扫拖一体机器人100问.txt路径不存在
+2026-02-04 21:09:32,736 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:32,737 - agent - ERROR - vector_store.py:89 - [加载知识库]扫拖一体机器人100问.txt加载失败：name 'spilted_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 83, in load_document
+    self.vector_store.add_documents(spilted_document)
+                                    ^^^^^^^^^^^^^^^^
+NameError: name 'spilted_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:09:32,738 - agent - ERROR - file_handler.py:10 - md5获取失败,故障排除.txt路径不存在
+2026-02-04 21:09:32,738 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:32,739 - agent - ERROR - vector_store.py:89 - [加载知识库]故障排除.txt加载失败：name 'spilted_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 83, in load_document
+    self.vector_store.add_documents(spilted_document)
+                                    ^^^^^^^^^^^^^^^^
+NameError: name 'spilted_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:09:32,740 - agent - ERROR - file_handler.py:10 - md5获取失败,维护保养.txt路径不存在
+2026-02-04 21:09:32,740 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:32,741 - agent - ERROR - vector_store.py:89 - [加载知识库]维护保养.txt加载失败：name 'spilted_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 83, in load_document
+    self.vector_store.add_documents(spilted_document)
+                                    ^^^^^^^^^^^^^^^^
+NameError: name 'spilted_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:09:32,742 - agent - ERROR - file_handler.py:10 - md5获取失败,选购指南.txt路径不存在
+2026-02-04 21:09:32,742 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:32,743 - agent - ERROR - vector_store.py:89 - [加载知识库]选购指南.txt加载失败：name 'spilted_document' is not defined
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 83, in load_document
+    self.vector_store.add_documents(spilted_document)
+                                    ^^^^^^^^^^^^^^^^
+NameError: name 'spilted_document' is not defined. Did you mean: 'spilt_document'?
+2026-02-04 21:09:51,306 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问.pdf路径不存在
+2026-02-04 21:09:51,306 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:51,350 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(os.path.join(get_abs_path("data"),f))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-02-04 21:09:51,352 - agent - ERROR - file_handler.py:10 - md5获取失败,扫地机器人100问2.txt路径不存在
+2026-02-04 21:09:51,352 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:54,565 - agent - ERROR - vector_store.py:89 - [加载知识库]扫地机器人100问2.txt加载失败：unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 85, in load_document
+    save_md5(md5)
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 46, in save_md5
+    f.write(md5_for_checked+"\n")
+            ~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2026-02-04 21:09:54,565 - agent - ERROR - file_handler.py:10 - md5获取失败,扫拖一体机器人100问.txt路径不存在
+2026-02-04 21:09:54,565 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:09:58,528 - agent - ERROR - vector_store.py:89 - [加载知识库]扫拖一体机器人100问.txt加载失败：unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 85, in load_document
+    save_md5(md5)
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 46, in save_md5
+    f.write(md5_for_checked+"\n")
+            ~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2026-02-04 21:09:58,529 - agent - ERROR - file_handler.py:10 - md5获取失败,故障排除.txt路径不存在
+2026-02-04 21:09:58,529 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:10:05,738 - agent - ERROR - vector_store.py:89 - [加载知识库]故障排除.txt加载失败：unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 85, in load_document
+    save_md5(md5)
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 46, in save_md5
+    f.write(md5_for_checked+"\n")
+            ~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2026-02-04 21:10:05,738 - agent - ERROR - file_handler.py:10 - md5获取失败,维护保养.txt路径不存在
+2026-02-04 21:10:05,738 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:10:10,082 - agent - ERROR - vector_store.py:89 - [加载知识库]维护保养.txt加载失败：unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 85, in load_document
+    save_md5(md5)
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 46, in save_md5
+    f.write(md5_for_checked+"\n")
+            ~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2026-02-04 21:10:10,082 - agent - ERROR - file_handler.py:10 - md5获取失败,选购指南.txt路径不存在
+2026-02-04 21:10:10,082 - agent - ERROR - file_handler.py:22 - md5获取失败
+2026-02-04 21:10:13,690 - agent - ERROR - vector_store.py:89 - [加载知识库]选购指南.txt加载失败：unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 85, in load_document
+    save_md5(md5)
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 46, in save_md5
+    f.write(md5_for_checked+"\n")
+            ~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2026-02-04 21:25:48,024 - agent - ERROR - vector_store.py:89 - [加载知识库]E:\Agent\assitantagent\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 71, in load_document
+    document = get_document(f)
+               ^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\rag\vector_store.py", line 53, in get_document
+    return pdf_loader(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Agent\assitantagent\utils\file_handler.py", line 37, in pdf_loader
+    return PyPDFLoader(file_path,password).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\Tuyaiiii\.conda\envs\Agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-02-04 21:25:51,241 - agent - INFO - vector_store.py:86 - [加载知识库]E:\Agent\assitantagent\data\扫地机器人100问2.txt 内容加载成功
+2026-02-04 21:25:55,398 - agent - INFO - vector_store.py:86 - [加载知识库]E:\Agent\assitantagent\data\扫拖一体机器人100问.txt 内容加载成功
+2026-02-04 21:26:02,408 - agent - INFO - vector_store.py:86 - [加载知识库]E:\Agent\assitantagent\data\故障排除.txt 内容加载成功
+2026-02-04 21:26:06,808 - agent - INFO - vector_store.py:86 - [加载知识库]E:\Agent\assitantagent\data\维护保养.txt 内容加载成功
+2026-02-04 21:26:10,494 - agent - INFO - vector_store.py:86 - [加载知识库]E:\Agent\assitantagent\data\选购指南.txt 内容加载成功
+2026-02-04 21:27:39,509 - agent - INFO - vector_store.py:86 - [加载知识库]E:\Agent\assitantagent\data\扫地机器人100问.pdf 内容加载成功
+2026-02-04 21:27:39,528 - agent - INFO - vector_store.py:67 - [load_document]文件已存在于知识库
+2026-02-04 21:27:39,529 - agent - INFO - vector_store.py:67 - [load_document]文件已存在于知识库
+2026-02-04 21:27:39,530 - agent - INFO - vector_store.py:67 - [load_document]文件已存在于知识库
+2026-02-04 21:27:39,530 - agent - INFO - vector_store.py:67 - [load_document]文件已存在于知识库
+2026-02-04 21:27:39,532 - agent - INFO - vector_store.py:67 - [load_document]文件已存在于知识库

@@ -1,0 +1,2 @@
+chat_model: "qwen3-max"
+embedding_model: "text-embedding-v4"
